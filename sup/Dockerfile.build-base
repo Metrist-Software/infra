@@ -1,0 +1,14 @@
+FROM elixir:1.11-slim AS build
+
+ENV REFRESHED_AT 20210812T212620Z
+RUN apt-get update
+RUN apt-get install -y build-essential git curl
+
+WORKDIR /app
+
+RUN mix local.hex --force && \
+    mix local.rebar --force
+
+ENV LANG=C.UTF-8
+ENV MIX_ENV=prod
+

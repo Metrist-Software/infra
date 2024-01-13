@@ -1,0 +1,13 @@
+*.d.ts
+*.js
+!manual/**/*.js
+node_modules
+cdktf.out
+cdktf.log
+*terraform.*.tfstate*
+.gen
+.terraform
+.log
+sup/priv/build.txt
+
+.envrc

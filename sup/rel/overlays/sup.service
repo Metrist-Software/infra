@@ -1,0 +1,11 @@
+[Unit]
+Description=Metrist.io SUP
+
+[Service]
+ExecStart=/opt/sup/bin/sup start
+TimeoutStopSec=30
+EnvironmentFile=-/etc/default/metrist-sup
+User=root
+
+[Install]
+WantedBy=multi-user.target
